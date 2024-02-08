@@ -1,0 +1,89 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+body {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    background-image: url(../../../images/pattern-background-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: v.$Desaturatedblue;
+
+    @media (min-width: 1440px) {
+        background-image: url(../../../images/pattern-background-desktop.svg);
+        background-size: contain;
+    }
+}
+
+
+
+.card {
+    background-color: v.$Verypaleblue;
+    border-radius: 2rem;
+    overflow: hidden;
+    max-width: 35rem;
+    box-shadow: 0px 22px 39px -25px rgba(0,0,0,0.25);
+}
+
+.content {
+    margin: 2rem 1rem;
+    text-align: center;
+
+    .content__title {color: v.$Darkblue;}
+
+    .content__description {margin: 2rem 3.2rem;}
+}
+
+.plan {
+    margin: 0 1rem;
+    background-color: v.$Paleblue;
+    padding: 1.5rem 0;
+    border-radius: 1rem;
+    @include m.flex(row, space-around, center);
+
+    .container-plan {
+        @include m.flex(row, center, center, 2rem);
+
+        .container-text {
+            .container-text__plan--bold {
+                font-weight: bold;
+                color: v.$Darkblue;
+            }
+        }
+    }
+
+    .plan__change {
+        font-size: 1.4rem;
+        font-weight: bold;
+        color: v.$Brightblue;
+    }
+
+}
+
+
+.footer {
+    padding-bottom: 2rem;
+    @include m.flex(column, center, center, 2rem);
+    
+
+    .footer__agree {
+        background-color: v.$Brightblue;
+        border: none;
+        border-radius: 1rem;
+        color: v.$Verypaleblue;
+        font-weight: bold;
+        font-size: 1.4rem;
+        padding: 1.5rem 8.5rem;
+        cursor: pointer;
+        box-shadow: 0px 22px 40px -10px rgba(0,0,0,0.4);
+
+        &:hover {background-color: #8E8FFA;}
+    }
+
+    .footer__cancel {
+        text-decoration: none;
+        color: v.$Desaturatedblue;
+        font-weight: bold;
+    }
+}

@@ -1,0 +1,20 @@
+{
+  "name": "order-summary-component-main",
+  "version": "1.0.0",
+  "description": "Challenge of Frontend Mentor",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch --no-error-css src/scss/:build/css"
+  },
+  "keywords": [
+    "Html",
+    "Sass",
+    "Npm"
+  ],
+  "author": "Aikna",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.70.0"
+  }
+}
